@@ -1,0 +1,33 @@
+
+.race-list-ul {
+    list-style-type: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.race-div {
+    /*position: relative;*/
+    max-height: 30vh;
+    width: 34vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: 6px solid #777777;
+    border-radius: 10px;
+    box-shadow: 0 0 4px #555555;
+    /*padding: 0;*/
+    padding: 6px;
+    box-sizing: border-box;
+    border-left-width: 0;
+    border-right-width: 0;
+    background-color: inherit;
+    /*background-color: #777777;*/
+    /*left: 4vw;*/
+    margin: 8vh 0 0;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}

@@ -1,0 +1,49 @@
+.preview-text {
+    margin: 2px;
+    font-size: calc(5px + 1vmin);
+    overflow: hidden;
+}
+
+.preview-text.blink {
+    /*color: #c13535;*/
+    animation: blink 2s infinite;
+    animation-direction: alternate-reverse;
+}
+
+/*.preview-text.shown {*/
+/*    animation: show 1s;*/
+/*}*/
+
+/*.preview-text.hidden {*/
+/*    animation: hide 1s;*/
+/*}*/
+
+@keyframes blink{
+    from {
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+    50% {
+        animation-timing-function: ease-out;
+        opacity: 0.4;
+    }
+    to {
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+}
+
+@keyframes show {
+    from {
+        height: 0;
+    }
+    to {
+        height: auto;
+    }
+}
+
+@keyframes hide {
+    to {
+        height: 0;
+    }
+}

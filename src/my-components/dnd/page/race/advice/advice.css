@@ -1,0 +1,13 @@
+.advice-div {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+    margin-top: 16vh;
+    font-size: calc(6px + 2vmin);
+    opacity: 0.4;
+    text-align: center;
+    text-transform: full-width;
+
+}

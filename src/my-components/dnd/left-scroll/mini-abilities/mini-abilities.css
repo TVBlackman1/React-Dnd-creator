@@ -1,0 +1,29 @@
+.abilities {
+    padding: 10px;
+    /*margin-top: 12vh;*/
+    box-sizing: border-box;
+    /*border: 1px solid black;*/
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-row-gap: 5px;
+    grid-column-gap: 7px;
+    font-size: calc(2px + 1vmin);
+
+}
+
+.abilities div {
+    --height: 6px;
+    margin-top: calc((2px + 1vmin) / 2 - var(--height)/2);
+    height: var(--height);
+    /*width: 10vw;*/
+    background-color: #61dafb;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-left: 2px solid black;
+    /*border-right: 1px solid brown;*/
+    border-bottom: 1px solid darkblue;
+    box-sizing: border-box;
+    /*transition-duration: 0.25s;*/
+    /*transition-delay: 0.08s;*/
+}

@@ -1,0 +1,12 @@
+.page-title {
+    position: relative;
+    left: 5vw;
+    top: 3vh;
+    font-family: major-mono-display;
+    font-size: calc(10px + 2vmin);
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}

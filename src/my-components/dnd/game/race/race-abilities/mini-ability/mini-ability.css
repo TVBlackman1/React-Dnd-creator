@@ -1,0 +1,39 @@
+.abilities-race div.visual {
+    --height: 6px;
+    /*margin-top: calc((6px + 1vmin) / 2 - var(--height)/2);*/
+    height: var(--height);
+    /*width: 10vw;*/
+    /*border-bottom-right-radius: 10px;*/
+    /*border-top-right-radius: 10px;*/
+    border-left: 2px solid black;
+    /*border-right: 1px solid brown;*/
+    /*border-bottom: 1px solid #c13535;*/
+    box-sizing: border-box;
+    transition-duration: 0.25s;
+    transition-delay: 0.4s;
+}
+
+.abilities-race div.visual-wrapper {
+    --height: 8px;
+    margin-top: calc((6px + 1vmin) / 2 - var(--height)/2);
+    padding: 0;
+    height: var(--height);
+    border: 1px solid #adab9d;
+    box-sizing: border-box;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.abilities-race div.name, div.ability-number {
+    font-size: calc(6px + 1vmin);
+    cursor: default;
+    font-weight: 500;
+}
+
+.standard {
+    background-color: #b44c4c;
+}
+
+.second {
+    background-color: #4d4de3;
+}

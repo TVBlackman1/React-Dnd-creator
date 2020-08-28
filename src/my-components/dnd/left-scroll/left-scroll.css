@@ -1,0 +1,34 @@
+.left-scroll-div {
+    top: 2vh;
+    left: 1vw;
+    width: 20vw;
+    /*background-color: #61dafb;*/
+    position: fixed;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+
+.left-scroll-ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 12vh;
+}
+
+.left-scroll-li {
+    font-size: calc(6px + 1vmin);
+    margin-top: 7vh;
+    opacity: 0.3;
+    text-transform: uppercase;
+    transition-duration: 0.25s;
+    transition-delay: 0.08s;
+}
+
+.left-scroll-li:hover {
+    opacity: 1;
+    color: #111111;
+    cursor: default;
+    transform: translateX(5px);
+}

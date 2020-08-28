@@ -1,0 +1,76 @@
+.subtitle {
+    font-size: calc(8px + 1vmin);
+    margin: 10px;
+    font-weight: 700;
+}
+
+.race-description {
+    width: 40vw;
+    /*font-size: calc(6px + 1vmin);*/
+    /*border: 10px solid #4c4840;*/
+    border-radius: 30px;
+    box-shadow: 1px 1px 7px #555555;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    overflow: scroll;
+}
+
+.header-back {
+    background-color: #35b3d5;
+}
+
+.race-description header {
+    /*margin: 10px 20px 20px 20px;*/
+
+    padding: 15px 20px 15px 20px;
+    box-sizing: border-box;
+    color: whitesmoke;
+    font-weight: 700;
+    font-size: calc(8px + 2vmin);
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+
+
+}
+
+.race-description header.hidden {
+    animation: header-scroll-down 0.4s linear;
+}
+
+.race-description main {
+    font-size: calc(4px + 1vmin);
+}
+
+@keyframes header-scroll-down {
+    50% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    50.001% {
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes header-scroll-right {
+    50% {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    50.001% {
+        transform: translateX(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
