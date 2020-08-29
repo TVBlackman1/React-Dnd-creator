@@ -2,15 +2,16 @@
 import React from "react";
 import './list.css'
 import Li from "./li/li";
-import HillDwarf from "../../../game/race/races/HillDwarf";
-import HighElf from "../../../game/race/races/HighElf";
-import LightfootHalfling from "../../../game/race/races/LightfootHalfling";
-import Human from "../../../game/race/races/Human";
-import Dragonborn from "../../../game/race/races/Dragonborn";
-import RockGnome from "../../../game/race/races/RockGnome";
-import HalfElf from "../../../game/race/races/HalfElf";
-import HalfOrc from "../../../game/race/races/HalfOrc";
-import Tiefling from "../../../game/race/races/Tiefling";
+import races2subraces from "../../../game/race/races-subraces";
+// import HillDwarf from "../../../game/race/races/HillDwarf";
+// import HighElf from "../../../game/race/races/HighElf";
+// import LightfootHalfling from "../../../game/race/races/LightfootHalfling";
+// import Human from "../../../game/race/races/Human";
+// import Dragonborn from "../../../game/race/races/Dragonborn";
+// import RockGnome from "../../../game/race/races/RockGnome";
+// import HalfElf from "../../../game/race/races/HalfElf";
+// import HalfOrc from "../../../game/race/races/HalfOrc";
+// import Tiefling from "../../../game/race/races/Tiefling";
 
 class List extends React.Component {
     constructor(props) {
@@ -21,29 +22,7 @@ class List extends React.Component {
         this.lastChild = null
         this.thisChild = null
         this.state = {
-            pos: 0,
-            races: [
-                'Дварф',
-                'Эльф',
-                'Полурослик',
-                'Человек',
-                'Драконорожденный',
-                'Гном',
-                'Полуэльф',
-                'Полуорк',
-                'Тифлинг',
-            ],
-            classes: [
-                new HillDwarf(),
-                new HighElf(),
-                new LightfootHalfling(),
-                new Human(),
-                new Dragonborn(),
-                new RockGnome(),
-                new HalfElf(),
-                new HalfOrc(),
-                new Tiefling()
-            ]
+            races: Object.keys(races2subraces)
         }
     }
     render() {
@@ -75,10 +54,10 @@ class List extends React.Component {
             this.thisChild = child
             this.lastChild.removeFocus()
         }
-        let ind = this.state.races.indexOf(child.dndRaceName)
-        this.changeDescription(this.state.classes[ind])
-        // получает имя выбранной расы и по нему ищет соответствующий класс.
-        // выводит описание класса.
+        // let ind = this.state.races.indexOf(child.dndRaceName)
+        this.changeDescription(races2subraces[child.dndRaceName])
+        // получает имя выбранной расы и по нему ищет массив подрас.
+        // выводит их описание
 
     }
 

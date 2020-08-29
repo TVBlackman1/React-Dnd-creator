@@ -14,9 +14,15 @@ class RaceDescription extends React.Component {
         }
     }
 
-    selectRace(n_race) {
+    /**
+     * 
+     * Принимается массив возможных подрас, идущих под одним общим названием
+     * ind - по умолчанию не передается. Передается только при выборе расы через
+     * header описания расы
+     */
+    selectRace(raceArray, ind=0) {
         this.setState({
-            race: n_race
+            race: raceArray[ind]
         })
     }
 

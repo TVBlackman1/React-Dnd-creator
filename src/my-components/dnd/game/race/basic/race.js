@@ -30,7 +30,9 @@ class Race {
         }
 
         // массив для супер-классов, для импорта информации из списка
-        this.subclasses = []
+        this.subraces = []
+        // раса первой показывается, если есть subraces
+        this.firstRace = null
 
         this.incAbility = this.incAbility.bind(this)
         this.decAbility = this.decAbility.bind(this)

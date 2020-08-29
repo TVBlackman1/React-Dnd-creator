@@ -16,9 +16,12 @@ class PageRace extends React.Component {
         this.selectRace = this.selectRace.bind(this)
     }
 
-    selectRace(race) {
+    /**
+     * Принимает на вход список подрас одной расы
+     */
+    selectRace(raceArray) {
         // alert(race)
-        this.descriptionRef.current.selectRace(race)
+        this.descriptionRef.current.selectRace(raceArray)
     }
 
     render() {
