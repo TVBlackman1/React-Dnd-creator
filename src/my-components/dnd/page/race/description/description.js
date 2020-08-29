@@ -9,7 +9,7 @@ class RaceDescription extends React.Component {
         this.reference = new React.createRef()
         // ссылкка на <ShowRace>
         this.state = {
-            race: new HillDwarf()
+            raceArray: [new HillDwarf()]
             // раса, первая будет отображаться
         }
     }
@@ -20,15 +20,15 @@ class RaceDescription extends React.Component {
      * ind - по умолчанию не передается. Передается только при выборе расы через
      * header описания расы
      */
-    selectRace(raceArray, ind=0) {
+    selectRace(raceArray) {
         this.setState({
-            race: raceArray[ind]
+            raceArray: raceArray
         })
     }
 
     // поставить расу в самом начале
     componentDidMount() {
-        this.reference.current.changeRace(this.state.race)
+        this.reference.current.changeRace(this.state.raceArray)
     }
 
     /**
@@ -36,13 +36,13 @@ class RaceDescription extends React.Component {
      * в дочернем компоненте
      * */
     componentDidUpdate(prevProps, prevState, snapshot) {
-        this.reference.current.changeRace(this.state.race)
+        this.reference.current.changeRace(this.state.raceArray)
 
     }
 
     render() {
         return (
-                <ShowRace ref={this.reference} race={this.state.race}/>
+                <ShowRace ref={this.reference} raceArray={this.state.raceArray}/>
         );
     }
 }

@@ -9,7 +9,6 @@ class PageRace extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            pos: 0
         }
 
         this.descriptionRef = new React.createRef()
