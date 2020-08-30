@@ -6,10 +6,6 @@ class ForestGnome extends Gnome{
         this.name += " (Лесной)"
         this.ability.Dexterity = 1
     }
-
-    getHitPointsMaxBonus() {
-        return this.level;
-    }
 }
 
 export default ForestGnome
