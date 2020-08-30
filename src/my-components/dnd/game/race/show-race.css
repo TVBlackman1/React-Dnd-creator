@@ -35,7 +35,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: default;
+    cursor: pointer;
 
 
 }
@@ -62,7 +62,7 @@
     height: 300px;
     backdrop-filter: blur(3px);
     /* background: linear-gradient(180deg, #35b3d5 0%, rgba(0,212,255,1) 35%, rgba(0,212,255,100) 100%); */
-    background: linear-gradient(180deg, #35b3d5 0%, rgba(159, 211, 221, 0.3) 32%,  rgba(0,0,255,0.1) 60%, rgba(168, 168, 197, 0) 100%);
+    background: linear-gradient(180deg, #35b3d5 0%, rgba(168, 168, 197, 0) 100%);
     display: flex;
     align-items: center;
     /* justify-content: center; */
@@ -78,7 +78,6 @@
 
 .race-description .race-picker div.picker-race{
     
-    /* position: absolute; */
     font-size: calc(8px + 2vmin);
     padding: 12px;
     background-color: #fdfdfd;
@@ -93,6 +92,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition-duration: 0.25s;
+    transition-delay: 0.08s;
+    transition-timing-function: ease-out;
+
+}
+
+.race-description .race-picker div.picker-race:hover{
+    
+    box-shadow: 0 0 6px #1c768f;
+    transform: scale(1.1);
+    transition-timing-function: cubic-bezier(.19,1.59,.7,1.52);
 }
 
 @keyframes header-scroll-down {

@@ -21,6 +21,8 @@ import HalfOrc from "./races/HalfOrc"
 
 import Tiefling from "./races/Tiefling"
 
+
+// Длбавлять сюда расы для соответствия данных из списка и классами рас
 var races2subraces = {
     "Дварф": [
         new HillDwarf(),

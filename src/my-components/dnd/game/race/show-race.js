@@ -134,9 +134,3 @@ class PickerRace extends React.Component {
 }
 
 export default ShowRace
-
-// ()=>{
-//     alert(raceInd)
-//     this.changeRace.bind(this)(this.state.raceArray, raceInd)
-//     this.handleClickHeader();
-// }

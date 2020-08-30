@@ -10,7 +10,7 @@
     /*border-bottom: 1px solid #c13535;*/
     box-sizing: border-box;
     transition-duration: 0.25s;
-    transition-delay: 0.4s;
+    /* transition-delay: 0.9s; */
 }
 
 .abilities-race div.visual-wrapper {
