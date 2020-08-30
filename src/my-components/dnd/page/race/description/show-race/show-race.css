@@ -36,6 +36,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: relative;
 
 
 }
@@ -72,7 +73,7 @@
     overflow: scroll;
 }
 
-.race-description .closed {
+.race-description .race-picker.closed {
     height: 0px;
 }
 
@@ -103,6 +104,28 @@
     box-shadow: 0 0 6px #1c768f;
     transform: scale(1.1);
     transition-timing-function: cubic-bezier(.19,1.59,.7,1.52);
+}
+
+.race-description .triangle {
+    transition-duration: 0.25s;
+    transition-delay: 0.08s;
+    transition-timing-function: ease-out;
+
+    position: absolute;
+    padding: inherit;
+    right: 0;
+    transform: none;
+}
+
+.race-description .triangle.closed {
+    /* transition-duration: 0.25s;
+    transition-delay: 0.08s;
+    transition-timing-function: ease-out;
+    
+    position: absolute;
+    padding: inherit;
+    right: 0; */
+    transform: rotateZ(180deg);
 }
 
 @keyframes header-scroll-down {

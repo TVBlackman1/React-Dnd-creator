@@ -93,6 +93,9 @@ class ShowRace extends React.Component {
                 <div className="header-bg" onClick={this.handleClickHeader.bind(this)}>
                     <header className={this.state.headerStyle}>
                         ± {this.state.raceArray[this.state.raceInd].name} ±
+                        <div className={"triangle " + this.state.pickMenuStyle}>
+                        {this.state.raceArray.length > 1 ? "▲" : ""}
+                        </div>
                     </header>
                 </div>
                 <main>
