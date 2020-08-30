@@ -9,6 +9,7 @@ import LightfootHalfling from "./races/LightfootHalfling"
 import StoutHalfling from "./races/StoutHalfling"
 
 import Human from "./races/Human"
+import HumanAlt from "./races/HumanAlt"
 
 import Dragonborn from "./races/Dragonborn"
 
@@ -38,7 +39,8 @@ var races2subraces = {
         new StoutHalfling(),
     ],
     "Человек": [
-        new Human()
+        new Human(),
+        new HumanAlt()
     ],
     "Драконорожденный": [
         new Dragonborn()
