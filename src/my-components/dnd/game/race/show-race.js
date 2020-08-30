@@ -13,6 +13,10 @@ class ShowRace extends React.Component {
             headerStyle: ""
         }
         this.refAbility = new React.createRef()
+        this.lastPickRaces = new Map()
+        // для хранения последних используемых индексов для каждого массива подрас
+        // ключами являются строки, для раздельности они именуются названием первой
+        // расы в массиве. Не допускается иметь несколько одинакого названных рас.
     }
 
     setAbility() {
@@ -33,7 +37,18 @@ class ShowRace extends React.Component {
         this.setAbility()
     }
 
-    changeRace(raceArray, ind=0) {
+    changeRace(raceArray, ind=-1) {
+        if(this.lastPickRaces.has(raceArray[0].name)) {
+            // если индекс уже существует в памяти, то поставить его.
+            // если он передается как -1 (т.е. явно не существует), то поставить
+            // значение из памяти, если передается четкий явный индекс,то поставить его
+            ind = (ind !== -1)? ind : this.lastPickRaces.get(raceArray[0].name)
+        } else {
+            // если отсутствует, то раса выбрана впервые, можно показать первый элемент
+            ind = 0
+        }
+        this.lastPickRaces.set(raceArray[0].name, ind)
+
         this.setState({
             headerStyle: "hidden"
         })
