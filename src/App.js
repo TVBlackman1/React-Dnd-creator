@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import ReactPageScroller from "react-page-scroller";
 import PageRace from "./my-components/dnd/page/race/race";
+import PageClass from "./my-components/dnd/page/class/class";
 import Page from "./my-components/dnd/page/page";
 import LeftScroll from "./my-components/dnd/left-scroll/left-scroll";
 
@@ -31,7 +32,7 @@ export default class App extends React.Component{
         {/*    animationTimer={250}*/}
         {/*>*/}
           <PageRace />
-          <Page color="#54617d"/>
+          <PageClass />
         {/*</ReactPageScroller>*/}
         <LeftScroll />
         </div>
