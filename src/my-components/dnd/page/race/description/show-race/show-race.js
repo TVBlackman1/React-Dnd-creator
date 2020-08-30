@@ -1,5 +1,5 @@
 import React from "react";
-import MiniAbilities from "./race-abilities/mini-abilities";
+import MiniAbilities from "../race-abilities/mini-abilities";
 import "./show-race.css"
 
 class ShowRace extends React.Component {

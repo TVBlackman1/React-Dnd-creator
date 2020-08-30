@@ -1,6 +1,6 @@
 import React from "react";
 import './description.css'
-import ShowRace from "../../../game/race/show-race";
+import ShowRace from "./show-race/show-race"
 import HillDwarf from "../../../game/race/races/HillDwarf";
 import MountainDwarf from "../../../game/race/races/MountainDwarf";
 
