@@ -1,6 +1,6 @@
 .subtitle {
     font-size: calc(8px + 1vmin);
-    /* margin: 10px; */
+    margin: 10px;
     font-weight: 700;
 }
 
@@ -45,9 +45,12 @@
 }
 
 .race-description main {
+    /* margin-top: 0; */
     /* height: 100%; */
     font-size: calc(4px + 1vmin);
     position: relative;
+    /* border: 0px solid black; */
+    padding: 1px; /* убираем схлопывание элементов, нужно*/
 }
 
 .race-description .race-picker {
@@ -59,7 +62,7 @@
     height: 300px;
     backdrop-filter: blur(3px);
     /* background: linear-gradient(180deg, #35b3d5 0%, rgba(0,212,255,1) 35%, rgba(0,212,255,100) 100%); */
-    background: linear-gradient(180deg, #35b3d5 0%, rgba(0,212,255,0.6) 12%,  rgba(0,0,255,0.1) 60%, rgba(168, 168, 197, 0) 100%);
+    background: linear-gradient(180deg, #35b3d5 0%, rgba(159, 211, 221, 0.3) 32%,  rgba(0,0,255,0.1) 60%, rgba(168, 168, 197, 0) 100%);
     display: flex;
     align-items: center;
     /* justify-content: center; */

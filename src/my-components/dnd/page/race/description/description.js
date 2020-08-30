@@ -2,6 +2,7 @@ import React from "react";
 import './description.css'
 import ShowRace from "../../../game/race/show-race";
 import HillDwarf from "../../../game/race/races/HillDwarf";
+import MountainDwarf from "../../../game/race/races/MountainDwarf";
 
 class RaceDescription extends React.Component {
     constructor(props) {
@@ -9,7 +10,7 @@ class RaceDescription extends React.Component {
         this.reference = new React.createRef()
         // ссылкка на <ShowRace>
         this.state = {
-            raceArray: [new HillDwarf()]
+            raceArray: [new HillDwarf(), new MountainDwarf()]
             // раса, первая будет отображаться
         }
     }
