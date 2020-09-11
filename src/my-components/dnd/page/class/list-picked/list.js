@@ -5,12 +5,10 @@ import Li from "./li/li";
 import races2subraces from "../../../game/race/races-subraces";
 
 
-class List extends React.Component {
+class ListPicked extends React.Component {
     constructor(props) {
         super(props)
         this.changeDescription = this.props.changeDescription
-        // меняет окошко описания расы на выбранное
-        // this.funcForChildren = this.funcForChildren.bind(this)
         this.lastChild = null
         this.thisChild = null
         this.state = {
@@ -19,8 +17,8 @@ class List extends React.Component {
     }
     render() {
         return (
-            <div className="race-div">
-                <ul className="race-list-ul">
+            <div className="class-picked-div">
+                <ul className="class-list-picked-ul">
                     {this.state.races.map(
                         (text)=>(
                             <Li funcForList={this.funcForChildren.bind(this)}>{text}</Li>
@@ -53,11 +51,7 @@ class List extends React.Component {
 
     }
 
-    getRace() {
-
-    }
-
 
 }
 
-export default List
+export default ListPicked

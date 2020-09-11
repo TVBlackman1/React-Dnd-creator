@@ -3,6 +3,8 @@ import React from "react";
 import './class.css'
 import ClassDescription from "./description/description";
 import PageTitle from "../page-title";
+import List from "./list/list";
+import ListPicked from "./list-picked/list";
 // import Advice from "./advice/advice";
 
 class PageClass extends React.Component {
@@ -12,25 +14,26 @@ class PageClass extends React.Component {
         }
 
         this.descriptionRef = new React.createRef()
-        this.selectRace = this.selectRace.bind(this)
     }
 
     /**
      * Принимает на вход список подрас одной расы
      */
-    selectRace(raceArray) {
+    selectClass(classArray) {
         // alert(race)
-        this.descriptionRef.current.selectRace(raceArray)
+        this.descriptionRef.current.selectClass(classArray)
     }
 
     render() {
         return (
             <div className="page-class-app">
                 <PageTitle>ВЫБОР КЛАССОВ</PageTitle>
+                <List changeDescription={this.selectClass.bind(this)}/>
+                <ListPicked changeDescription={this.selectClass.bind(this)}/>
                 {/* <List changeDescription={this.selectRace}/> */}
                 {/* <RaceDescription ref={this.descriptionRef}/> */}
                 {/* <Advice /> */}
-                <ClassDescription />
+                <ClassDescription ref={this.descriptionRef}/>
             </div>
         );
     }

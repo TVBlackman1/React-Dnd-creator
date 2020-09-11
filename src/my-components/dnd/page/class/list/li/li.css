@@ -1,0 +1,26 @@
+.class-list-li {
+    /*border-bottom: 1px solid #777777;*/
+    padding: 7px 0;
+    color: #282c34;
+    background-color: inherit;
+    /*background-color: #cccccc;*/
+    width: inherit;
+    font-size: calc(10px + 1vmin);
+    font-family: major-mono-display;
+    text-transform: uppercase;
+    text-align: center;
+    transition-duration: 0.25s;
+    transition-delay: 0.08s;
+    position: relative;
+    border-radius: 12px;
+}
+
+.class-list-li:hover {
+    cursor: default;
+    text-shadow: 0 0 1px #282c34;
+    /*background-color: rgba(52, 210, 204, 0.13);*/
+}
+
+.class-list-picked {
+    background-color: rgba(52, 210, 204, 0.13);
+}

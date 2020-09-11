@@ -16,6 +16,7 @@
     grid-row-end: 4;
     overflow: scroll;
     position: relative;
+    margin-bottom: 20px;
 }
 
 .header-bg {
